@@ -1,8 +1,6 @@
 function isExist(itemName, objectKey) {
     var value = itemName.value
-    console.log(value)
     for (var item of employeeList) {
-        console.log(item[objectKey])
         if (item[objectKey] == value) {
             return true
         }
@@ -85,7 +83,6 @@ function checkPassword() {
 function checkRange(item, errorNotiID, min, max) {
     item.oninput = function(e) {
         var value = Number(e.target.value)
-        console.log(value)
         if (isNaN(value)) {
             domId(errorNotiID).innerHTML = "Please input number only"
             domId(errorNotiID).style.display = "block"
